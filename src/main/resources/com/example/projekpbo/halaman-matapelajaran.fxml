@@ -10,39 +10,40 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="445.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projekpbo.DataMataPelajaran">
-   <children>
-      <StackPane prefHeight="70.0" prefWidth="513.0">
-         <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mata Pelajaran" wrappingWidth="97.8021240234375">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Text>
-         </children>
-      </StackPane>
-      <Text layoutX="10.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mata Pelajaran" />
-      <Text layoutX="8.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kelas" />
-      <Text layoutX="12.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NIP" />
-      <Text layoutX="10.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Guru" />
-      <Text layoutX="11.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hari" />
-      <Text layoutX="11.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jam" />
-      <TextField layoutX="132.0" layoutY="65.0" />
-      <TextField layoutX="132.0" layoutY="97.0" />
-      <TextField layoutX="132.0" layoutY="136.0" />
-      <TextField layoutX="132.0" layoutY="171.0" />
-      <TextField layoutX="132.0" layoutY="203.0" />
-      <TextField layoutX="132.0" layoutY="235.0" />
-      <Button layoutX="550.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleKeluarButtonAction" text="Keluar" />
-      <Button layoutX="132.0" layoutY="292.0" mnemonicParsing="false" text="save" textFill="BLUE" />
-      <Button layoutX="207.0" layoutY="292.0" mnemonicParsing="false" text="Update" />
-      <Button layoutX="300.0" layoutY="292.0" mnemonicParsing="false" text="Delete" textFill="RED" />
-      <TableView layoutX="8.0" layoutY="365.0" prefHeight="70.0" prefWidth="455.0">
-        <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
-        </columns>
-      </TableView>
-      <TextField layoutX="132.0" layoutY="331.0" />
-      <Button layoutX="300.0" layoutY="331.0" mnemonicParsing="false" text="Cari" />
-   </children>
+    <children>
+        <StackPane prefHeight="70.0" prefWidth="630.0">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mata Pelajaran" wrappingWidth="97.8021240234375">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Text>
+            </children>
+        </StackPane>
+        <Text layoutX="10.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mata Pelajaran" />
+        <Text layoutX="12.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NIP" />
+        <Text layoutX="10.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Guru" />
+        <Text layoutX="10.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hari" />
+        <Text layoutX="11.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jam" />
+        <TextField fx:id="kodeMapelField" layoutX="132.0" layoutY="65.0" />
+        <TextField fx:id="nipField" layoutX="132.0" layoutY="108.0" />
+        <TextField fx:id="namaGuruField" layoutX="132.0" layoutY="149.0" />
+        <TextField fx:id="hariField" layoutX="132.0" layoutY="191.0" />
+        <Button layoutX="550.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleKeluarButtonAction" text="Keluar" />
+        <Button fx:id="saveButton" layoutX="132.0" layoutY="266.0" mnemonicParsing="false" onAction="#handleSaveButtonAction" text="save" textFill="BLUE" />
+        <Button fx:id="updateButton" layoutX="208.0" layoutY="266.0" mnemonicParsing="false" onAction="#handleUpdateButtonAction" text="Update" />
+        <Button fx:id="deleteButton" layoutX="300.0" layoutY="266.0" mnemonicParsing="false" onAction="#handleDeleteButtonAction" text="Delete" textFill="RED" />
+        <TableView fx:id="tableView" layoutX="16.0" layoutY="339.0" prefHeight="92.0" prefWidth="598.0">
+            <columns>
+                <TableColumn fx:id="kodeMapelColumn" prefWidth="136.66668128967285" text="Kode Mapel" />
+                <TableColumn fx:id="hariColumn" prefWidth="79.33334350585938" text="Hari" />
+                <TableColumn fx:id="jamColumn" prefWidth="82.66670227050781" text="Jam" />
+                <TableColumn fx:id="nipColumn" prefWidth="127.33331298828125" text="NIP" />
+                <TableColumn fx:id="namaGuruColumn" prefWidth="172.66665649414062" text="Nama Guru" />
+            </columns>
+        </TableView>
+        <TextField fx:id="searchTextFieldTextField" layoutX="124.0" layoutY="305.0" />
+        <Button fx:id="searchButton" layoutX="307.0" layoutY="305.0" mnemonicParsing="false" onAction="#handleCariButtonAction" text="Cari" />
+      <TextField fx:id="jamField" layoutX="132.0" layoutY="221.0" />
+    </children>
 </AnchorPane>

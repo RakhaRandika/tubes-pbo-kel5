@@ -11,43 +11,47 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="456.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projekpbo.DataSiswa">
-   <children>
-      <Text layoutX="17.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NIS" />
-      <Text layoutX="16.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Siswa" />
-      <Text layoutX="16.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jenis Kelamin" />
-      <Text layoutX="16.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tempat Lahir" />
-      <Text layoutX="21.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Umur" />
-      <Text layoutX="16.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Angkatan" />
-      <StackPane layoutX="-3.0" layoutY="-4.0" prefHeight="65.0" prefWidth="551.0">
-         <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DATA SISWA">
-               <font>
-                  <Font name="System Bold Italic" size="12.0" />
-               </font>
-            </Text>
-         </children>
-      </StackPane>
-      <Button layoutX="86.0" layoutY="280.0" mnemonicParsing="false" text="Save" textFill="#012ffb" />
-      <Button layoutX="192.0" layoutY="280.0" mnemonicParsing="false" text="Update" />
-      <Button layoutX="301.0" layoutY="280.0" mnemonicParsing="false" text="Delete" textFill="RED" />
-      <ComboBox layoutX="117.0" layoutY="131.0" prefWidth="150.0" promptText="Pilih" />
-      <Button fx:id="exitButton" layoutX="532.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleExitButtonAction" text="keluar" />
-      <TextField layoutX="159.0" layoutY="334.0" />
-      <Button layoutX="338.0" layoutY="331.0" mnemonicParsing="false" text="Cari" />
-      <TableView layoutX="16.0" layoutY="376.0" prefHeight="65.0" prefWidth="465.0">
-        <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
-            <TableColumn prefWidth="75.0" text="C3" />
-            <TableColumn prefWidth="75.0" text="C4" />
-            <TableColumn prefWidth="75.0" text="C5" />
-            <TableColumn prefWidth="75.0" text="C6" />
-        </columns>
-      </TableView>
-      <TextField layoutX="94.0" layoutY="229.0" prefHeight="25.0" prefWidth="227.0" />
-      <TextField layoutX="94.0" layoutY="166.0" prefHeight="25.0" prefWidth="227.0" />
-      <TextField layoutX="94.0" layoutY="197.0" prefHeight="25.0" prefWidth="227.0" />
-      <TextField layoutX="94.0" layoutY="94.0" prefHeight="25.0" prefWidth="227.0" />
-      <TextField layoutX="94.0" layoutY="55.0" prefHeight="25.0" prefWidth="227.0" />
-   </children>
+    <children>
+        <Text layoutX="17.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NIS" />
+        <Text layoutX="16.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Siswa" />
+        <Text layoutX="16.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jenis Kelamin" />
+        <Text layoutX="7.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tempat/Tanggal  Lahir" wrappingWidth="88.10516357421875">
+         <font>
+            <Font size="10.0" />
+         </font></Text>
+        <Text layoutX="21.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Umur" />
+        <Text layoutX="16.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Angkatan" />
+        <StackPane layoutX="-3.0" layoutY="-4.0" prefHeight="65.0" prefWidth="551.0">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DATA SISWA">
+                    <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                    </font>
+                </Text>
+            </children>
+        </StackPane>
+        <Button fx:id="saveButton" layoutX="86.0" layoutY="280.0" mnemonicParsing="false" onAction="#handleSaveButtonAction" text="Save" textFill="#012ffb" />
+        <Button fx:id="updateButton" layoutX="192.0" layoutY="280.0" mnemonicParsing="false" onAction="#handleUpdateButtonAction" text="Update" />
+        <TextField fx:id="searchTextField" layoutX="106.0" layoutY="318.0" />
+        <Button fx:id="deleteButton" layoutX="301.0" layoutY="280.0" mnemonicParsing="false" onAction="#handleDeleteButtonAction" text="Delete" textFill="RED" />
+        <ComboBox fx:id="jenisKelaminComboBox" layoutX="117.0" layoutY="131.0" prefWidth="150.0" promptText="Pilih" />
+        <Button fx:id="exitButton" layoutX="532.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleExitButtonAction" text="keluar" />
+        <TextField fx:id="namaSiswaTextField" layoutX="94.0" layoutY="94.0" prefHeight="25.0" prefWidth="227.0" />
+        <TextField fx:id="tempatLahirTextField" layoutX="94.0" layoutY="166.0" prefHeight="25.0" prefWidth="227.0" />
+        <TextField fx:id="umurTextField" layoutX="94.0" layoutY="197.0" prefHeight="25.0" prefWidth="227.0" />
+        <TextField fx:id="angkatanTextField" layoutX="94.0" layoutY="229.0" prefHeight="25.0" prefWidth="227.0" />
+        <TextField fx:id="nisTextField" layoutX="94.0" layoutY="55.0" prefHeight="25.0" prefWidth="227.0" />
+        <Button fx:id="cariButton" layoutX="282.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleCariButtonAction" text="Cari" />
+        <TableView fx:id="siswaTableView" layoutX="4.0" layoutY="347.0" prefHeight="106.0" prefWidth="540.0">
+            <columns>
+                <TableColumn fx:id="columnNis" prefWidth="75.0" text="NIS" />
+                <TableColumn fx:id="columnNama" prefWidth="112.6666488647461" text="Nama" />
+                <TableColumn fx:id="columnJenisKelamin" prefWidth="88.00001525878906" text="Jenis Kelamin" />
+                <TableColumn fx:id="columnTempatLahir" prefWidth="126.66668701171875" text="Tempat Lahir" />
+                <TableColumn fx:id="columnUmur" prefWidth="53.33331298828125" text="Umur" />
+                <TableColumn fx:id="columnAngkatan" prefWidth="83.99996948242188" text="Angkatan" />
+
+            </columns>
+        </TableView>
+    </children>
 </AnchorPane>
