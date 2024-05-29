@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="445.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projekpbo.DataMataPelajaran">
+   <children>
+      <StackPane prefHeight="70.0" prefWidth="513.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mata Pelajaran" wrappingWidth="97.8021240234375">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </StackPane>
+      <Text layoutX="10.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mata Pelajaran" />
+      <Text layoutX="8.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kelas" />
+      <Text layoutX="12.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NIP" />
+      <Text layoutX="10.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Guru" />
+      <Text layoutX="11.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hari" />
+      <Text layoutX="11.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jam" />
+      <TextField layoutX="132.0" layoutY="65.0" />
+      <TextField layoutX="132.0" layoutY="97.0" />
+      <TextField layoutX="132.0" layoutY="136.0" />
+      <TextField layoutX="132.0" layoutY="171.0" />
+      <TextField layoutX="132.0" layoutY="203.0" />
+      <TextField layoutX="132.0" layoutY="235.0" />
+      <Button layoutX="550.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleKeluarButtonAction" text="Keluar" />
+      <Button layoutX="132.0" layoutY="292.0" mnemonicParsing="false" text="save" textFill="BLUE" />
+      <Button layoutX="207.0" layoutY="292.0" mnemonicParsing="false" text="Update" />
+      <Button layoutX="300.0" layoutY="292.0" mnemonicParsing="false" text="Delete" textFill="RED" />
+      <TableView layoutX="8.0" layoutY="365.0" prefHeight="70.0" prefWidth="455.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <TextField layoutX="132.0" layoutY="331.0" />
+      <Button layoutX="300.0" layoutY="331.0" mnemonicParsing="false" text="Cari" />
+   </children>
+</AnchorPane>
