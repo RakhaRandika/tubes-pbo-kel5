@@ -1,5 +1,6 @@
 package com.example.projekpbo;
 
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,6 +12,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 
@@ -31,6 +33,9 @@ public class MenuUtama {
     @FXML
     private Label lblMenuUtama;
 
+    @FXML
+    private Button keluar;
+
     public static void setDataSiswaController() {
     }
 
@@ -50,19 +55,15 @@ public class MenuUtama {
     public void buttonDiKlik(){
         System.out.println("button di klik");
     }
-    // Tambahkan metode atau logika lain sesuai kebutuhan aplikasi Anda
 
     @FXML
     public void navigateToSiswa(Event event){
         try {
-            // Load file FXML untuk halaman utama
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("halaman-siswa.fxml"));
             Parent root = fxmlLoader.load();
 
-            // Mendapatkan stage dari event
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-            // Mengatur scene utama dengan halaman utama dan menampilkan stage
             stage.setScene(new Scene(root));
             stage.setTitle("MenuUtama");
             stage.show();
@@ -72,6 +73,24 @@ public class MenuUtama {
 
         }
     }
+
+    @FXML
+    private void handleExitButtonAction(ActionEvent event) {
+        try {
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
+            Parent root = fxmlLoader.load();
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            stage.setScene(new Scene(root));
+            stage.setTitle("HelloConroller");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     private Stage stage;
     public void navigateToMenuUtama() {
         stage = (Stage) imgDataSiswa.getScene().getWindow();
@@ -93,14 +112,11 @@ public class MenuUtama {
     @FXML
     public void navigateToGuru(Event event) {
         try {
-            // Load file FXML untuk halaman utama
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("halaman-guru.fxml"));
             Parent root = fxmlLoader.load();
 
-            // Mendapatkan stage dari event
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-            // Mengatur scene utama dengan halaman utama dan menampilkan stage
             stage.setScene(new Scene(root));
             stage.setTitle("MenuUtama");
             stage.show();
