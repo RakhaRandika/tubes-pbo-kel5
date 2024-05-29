@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="456.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projekpbo.DataSiswa">
+   <children>
+      <Text layoutX="16.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NIP" />
+      <Label layoutX="113.0" layoutY="98.0" prefHeight="18.0" prefWidth="157.0" />
+      <Text layoutX="16.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Siswa" />
+      <Label layoutX="113.0" layoutY="68.0" prefHeight="18.0" prefWidth="157.0" />
+      <Text layoutX="16.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jenis Kelamin" />
+      <Label layoutX="113.0" layoutY="134.0" prefHeight="18.0" prefWidth="157.0" />
+      <Text layoutX="16.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tempat Lahir" />
+      <Text layoutX="21.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Umur" />
+      <Text layoutX="16.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Angkatan" />
+      <Label layoutX="113.0" layoutY="200.0" prefHeight="18.0" prefWidth="157.0" />
+      <Label layoutX="113.0" layoutY="233.0" prefHeight="18.0" prefWidth="157.0" />
+      <StackPane layoutX="-3.0" layoutY="-4.0" prefHeight="65.0" prefWidth="551.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DATA SISWA">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </StackPane>
+      <Button layoutX="86.0" layoutY="280.0" mnemonicParsing="false" text="Save" />
+      <Button layoutX="192.0" layoutY="280.0" mnemonicParsing="false" text="Update" textFill="#720404" />
+      <Button layoutX="301.0" layoutY="280.0" mnemonicParsing="false" text="Delete" />
+      <Button layoutX="392.0" layoutY="280.0" mnemonicParsing="false" text="Exit" />
+      <ComboBox layoutX="117.0" layoutY="131.0" prefWidth="150.0" promptText="laki-laki" />
+      <Button layoutX="532.0" layoutY="13.0" mnemonicParsing="false" text="Keluar" />
+      <TextField layoutX="159.0" layoutY="334.0" />
+      <Button layoutX="338.0" layoutY="331.0" mnemonicParsing="false" text="Cari" />
+      <TableView layoutX="16.0" layoutY="376.0" prefHeight="65.0" prefWidth="465.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+            <TableColumn prefWidth="75.0" text="C3" />
+            <TableColumn prefWidth="75.0" text="C4" />
+            <TableColumn prefWidth="75.0" text="C5" />
+            <TableColumn prefWidth="75.0" text="C6" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
