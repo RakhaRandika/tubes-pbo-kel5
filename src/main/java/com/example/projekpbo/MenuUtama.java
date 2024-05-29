@@ -70,9 +70,14 @@ public class MenuUtama {
             e.printStackTrace();
 
 
-
         }
     }
+    private Stage stage;
+    public void navigateToMenuUtama() {
+        stage = (Stage) imgDataSiswa.getScene().getWindow();
+    }
+
+
 
     private DataSiswa dataSiswaController;
     public void setDataSiswaController(DataSiswa dataSiswaController) {
@@ -81,4 +86,66 @@ public class MenuUtama {
 
 
 
+
+
+
+
+    @FXML
+    public void navigateToGuru(Event event) {
+        try {
+            // Load file FXML untuk halaman utama
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("halaman-guru.fxml"));
+            Parent root = fxmlLoader.load();
+
+            // Mendapatkan stage dari event
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            // Mengatur scene utama dengan halaman utama dan menampilkan stage
+            stage.setScene(new Scene(root));
+            stage.setTitle("MenuUtama");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+
+
+
+
+    } @FXML
+    public void navigateTopelajaran(Event event) {
+        try {
+            // Load file FXML untuk halaman utama
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("halaman-matapelajaran.fxml"));
+            Parent root = fxmlLoader.load();
+
+            // Mendapatkan stage dari event
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            // Mengatur scene utama dengan halaman utama dan menampilkan stage
+            stage.setScene(new Scene(root));
+            stage.setTitle("MenuUtama");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    } @FXML
+    public void navigateToRapot(Event event) {
+        try {
+            // Load file FXML untuk halaman utama
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("halaman-rapot.fxml"));
+            Parent root = fxmlLoader.load();
+
+            // Mendapatkan stage dari event
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            // Mengatur scene utama dengan halaman utama dan menampilkan stage
+            stage.setScene(new Scene(root));
+            stage.setTitle("MenuUtama");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

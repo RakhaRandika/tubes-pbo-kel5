@@ -23,7 +23,7 @@
       <Label layoutX="201.0" layoutY="235.0" text="Data Guru" />
       <Label layoutX="340.0" layoutY="235.0" text="Mata Pelajaran" />
       <Label layoutX="483.0" layoutY="235.0" text="Hasil Rapot" />
-      <Button contentDisplay="TOP" layoutX="157.0" layoutY="128.0" mnemonicParsing="false" onAction="#buttonDiKlik" text="Data Guru">
+      <Button contentDisplay="TOP" layoutX="157.0" layoutY="128.0" mnemonicParsing="false" onAction="#navigateToGuru" text="Data Guru">
          <graphic>
             <ImageView fx:id="imgDataGuru" fitHeight="132.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -41,7 +41,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button contentDisplay="TOP" layoutX="300.0" layoutY="130.0" mnemonicParsing="false" onAction="#buttonDiKlik" text="Mata Pelajaran">
+      <Button contentDisplay="TOP" layoutX="300.0" layoutY="130.0" mnemonicParsing="false" onAction="#navigateTopelajaran" text="Mata Pelajaran">
          <graphic>
             <ImageView fx:id="imgMataPelajaran" fitHeight="110.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -50,7 +50,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button contentDisplay="TOP" layoutX="446.0" layoutY="127.0" mnemonicParsing="false" onAction="#buttonDiKlik" text="Hasil Rapot">
+      <Button contentDisplay="TOP" layoutX="446.0" layoutY="127.0" mnemonicParsing="false" onAction="#navigateToRapot" text="Hasil Rapot">
          <graphic>
             <ImageView fx:id="imgHasilRapot" fitHeight="117.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
                <image>

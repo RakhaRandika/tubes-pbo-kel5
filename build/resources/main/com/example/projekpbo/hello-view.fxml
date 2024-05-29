@@ -11,6 +11,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projekpbo.HelloController">
    <children>
@@ -44,6 +45,8 @@
                   <TextField fx:id="UsernameTextField" layoutX="104.0" layoutY="130.0" promptText="Username" />
                   <PasswordField fx:id="passwordPasswordField" layoutX="104.0" layoutY="200.0" promptText="password" />
                   <Button fx:id="LoginButton" layoutX="104.0" layoutY="258.0" mnemonicParsing="false" text="Login" />
+                  <Text layoutX="34.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+                  <Text layoutX="34.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
 
                </children>
             </AnchorPane>
